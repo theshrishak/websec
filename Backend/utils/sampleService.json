@@ -1,0 +1,428 @@
+[
+  {
+    "serviceId": "677a176e8a2065fed4e56d90",
+    "serviceType": "Makeup",
+    "title": "Glamorous Red Carpet Makeup",
+    "description": "Elegant makeup fit for special red carpet events"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d91",
+    "serviceType": "Makeup",
+    "title": "Vintage Glam Makeup",
+    "description": "Classic retro looks with modern flair"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d92",
+    "serviceType": "Makeup",
+    "title": "Bold Graphic Eyeliner",
+    "description": "Striking eyeliner designs for standout eyes"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d93",
+    "serviceType": "Makeup",
+    "title": "Sun-Kissed Glow Makeup",
+    "description": "Bronzed and glowing makeup perfect for summer"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d94",
+    "serviceType": "Makeup",
+    "title": "Soft Romantic Makeup",
+    "description": "Gentle, soft tones for a romantic vibe"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d95",
+    "serviceType": "Makeup",
+    "title": "Festival Glitter Makeup",
+    "description": "Sparkling makeup ideal for music festivals"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d96",
+    "serviceType": "Makeup",
+    "title": "Matte Finish Makeup",
+    "description": "Smooth, shine-free makeup for all-day wear"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d97",
+    "serviceType": "Makeup",
+    "title": "Dramatic False Lash Application",
+    "description": "Full, voluminous lashes for a dramatic effect"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d98",
+    "serviceType": "Makeup",
+    "title": "Bridal Touch-Up Service",
+    "description": "On-site bridal makeup adjustments during the event"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d99",
+    "serviceType": "Makeup",
+    "title": "Editorial Fashion Makeup",
+    "description": "Bold and creative looks for fashion shoots"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d9a",
+    "serviceType": "Makeup",
+    "title": "Natural Everyday Makeup",
+    "description": "Quick and simple makeup for daily wear"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d9b",
+    "serviceType": "Makeup",
+    "title": "Glowing Skin Finish",
+    "description": "Highlight and illuminate your skin with radiance"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d9c",
+    "serviceType": "Makeup",
+    "title": "Bold Lip Art",
+    "description": "Creative lip designs and bold colors"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d9d",
+    "serviceType": "Makeup",
+    "title": "Natural Bridal Glow",
+    "description": "Soft and fresh bridal makeup look"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d9e",
+    "serviceType": "Makeup",
+    "title": "Evening Glamour",
+    "description": "Elegant makeup for formal evening events"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d9f",
+    "serviceType": "Makeup",
+    "title": "Classic Winged Eyeliner",
+    "description": "Perfect winged liner for timeless beauty"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56da0",
+    "serviceType": "Makeup",
+    "title": "Smokey Eye Tutorial",
+    "description": "Learn to create smoky eye looks"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56da1",
+    "serviceType": "Makeup",
+    "title": "Makeup for Mature Skin",
+    "description": "Enhancing beauty with age-appropriate makeup"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56da2",
+    "serviceType": "Makeup",
+    "title": "Bold and Bright Makeup",
+    "description": "Colorful looks to make a statement"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56da3",
+    "serviceType": "Makeup",
+    "title": "Matte Lipstick Application",
+    "description": "Perfect matte lips with long-lasting formula"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56da4",
+    "serviceType": "Makeup",
+    "title": "Highlight and Contour",
+    "description": "Enhance your facial features with expert shading"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56da5",
+    "serviceType": "Makeup",
+    "title": "Festival Face Painting",
+    "description": "Creative face art perfect for festival fun"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56da6",
+    "serviceType": "Makeup",
+    "title": "Sunset Glow Makeup",
+    "description": "Warm tones inspired by sunset hues"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56da7",
+    "serviceType": "Makeup",
+    "title": "Bridal Hair and Makeup Combo",
+    "description": "Complete bridal look including hair styling"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56da8",
+    "serviceType": "Makeup",
+    "title": "Dewy Finish Makeup",
+    "description": "Fresh and radiant look with dewy finish"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56da9",
+    "serviceType": "Makeup",
+    "title": "Bold Eye Shadow",
+    "description": "Vibrant eye shadow colors for dramatic eyes"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56daa",
+    "serviceType": "Makeup",
+    "title": "Natural Glow Enhancer",
+    "description": "Subtle makeup to enhance your natural glow"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56dab",
+    "serviceType": "Makeup",
+    "title": "Bridal Touch-Up Kit",
+    "description": "Portable kit for bridal makeup touch-ups"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56dac",
+    "serviceType": "Makeup",
+    "title": "Celebrity Inspired Makeup",
+    "description": "Recreate looks inspired by top celebrities"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56dad",
+    "serviceType": "Makeup",
+    "title": "Under Eye Brightening",
+    "description": "Techniques to brighten and conceal under eyes"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d61",
+    "serviceType": "Nail",
+    "title": "Minimal Heart Art",
+    "description": "Delicate heart designs for minimalistic lovers"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d62",
+    "serviceType": "Nail",
+    "title": "Minimalist Line Art",
+    "description": "Clean and simple line nail art for everyday elegance"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d63",
+    "serviceType": "Nail",
+    "title": "Mosaic Effect Nail Art",
+    "description": "Colorful mosaic patterns for a unique look"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d64",
+    "serviceType": "Nail",
+    "title": "Mother's Day Floral Art",
+    "description": "Special floral designs to celebrate moms"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d65",
+    "serviceType": "Nail",
+    "title": "Multi-Colored Gel Infill",
+    "description": "Bright gel infills with multiple colors"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d66",
+    "serviceType": "Nail",
+    "title": "Multiple Bead Technique",
+    "description": "Advanced bead application for 3D nail art"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d67",
+    "serviceType": "Nail",
+    "title": "Natural Look Extensions",
+    "description": "Extensions that blend seamlessly with your nails"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d68",
+    "serviceType": "Nail",
+    "title": "Neon Nail Art",
+    "description": "Vibrant neon colors to brighten your style"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d69",
+    "serviceType": "Nail",
+    "title": "Negative Space Design",
+    "description": "Modern nails using natural spaces and shapes"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d6a",
+    "serviceType": "Nail",
+    "title": "Non-Acid Primer for Extensions",
+    "description": "Gentle primer for sensitive nails"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d6b",
+    "serviceType": "Nail",
+    "title": "Ombre Blend Extensions",
+    "description": "Soft gradient effect for elegant extensions"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d6c",
+    "serviceType": "Nail",
+    "title": "Ombre Nail Extensions",
+    "description": "Eye-catching ombre style nail extensions"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d6d",
+    "serviceType": "Nail",
+    "title": "One Bead Acrylic Extension",
+    "description": "Precision acrylic bead application for smooth nails"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d6e",
+    "serviceType": "Nail",
+    "title": "One Stroke Flower Painting",
+    "description": "Beautiful floral designs painted with one stroke"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d6f",
+    "serviceType": "Nail",
+    "title": "Overlay Extensions",
+    "description": "Durable overlays to strengthen natural nails"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d70",
+    "serviceType": "Nail",
+    "title": "Overlay on Natural Nails",
+    "description": "Protect and beautify your natural nails"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d71",
+    "serviceType": "Nail",
+    "title": "Pastel Swirl Art",
+    "description": "Soft pastel swirls for a dreamy look"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d72",
+    "serviceType": "Nail",
+    "title": "Pearl Bead Art",
+    "description": "Elegant pearl accents for classy nails"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d73",
+    "serviceType": "Nail",
+    "title": "Pipe Shape Extensions",
+    "description": "Sleek pipe-shaped nail extensions"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d74",
+    "serviceType": "Nail",
+    "title": "Plaid & Tartan Patterns",
+    "description": "Classic plaid patterns with a modern twist"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d75",
+    "serviceType": "Nail",
+    "title": "Polygel Nail Extensions",
+    "description": "Lightweight and durable polygel nails"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d76",
+    "serviceType": "Nail",
+    "title": "Press-On Nail Extension Application",
+    "description": "Quick and easy press-on nail extensions"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d77",
+    "serviceType": "Nail",
+    "title": "Quick Repair Nail Art",
+    "description": "Fast fixes for chipped or damaged nail art"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d78",
+    "serviceType": "Nail",
+    "title": "Rainbow Stripes",
+    "description": "Colorful striped designs for vibrant nails"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d79",
+    "serviceType": "Nail",
+    "title": "Re-application for Lifted Art",
+    "description": "Secure lifted nail art with expert re-application"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d7a",
+    "serviceType": "Nail",
+    "title": "Rebalancing Outgrown Extensions",
+    "description": "Balance and reshape nails as they grow out"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d7b",
+    "serviceType": "Nail",
+    "title": "Refill/Infills for Extensions",
+    "description": "Maintain your extensions with professional infills"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d7c",
+    "serviceType": "Nail",
+    "title": "Reinforced Extension Base",
+    "description": "Strengthened base layer for lasting extensions"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d7d",
+    "serviceType": "Nail",
+    "title": "Reinforcement Fill",
+    "description": "Additional strength fill for weak nails"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d7e",
+    "serviceType": "Nail",
+    "title": "Removal of Embellishments",
+    "description": "Safe removal of nail gems and charms"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d7f",
+    "serviceType": "Nail",
+    "title": "Removal of Nail Art",
+    "description": "Gentle removal of polish and decorations"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d80",
+    "serviceType": "Nail",
+    "title": "Removal of Nail Extensions",
+    "description": "Professional extension removal without damage"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d81",
+    "serviceType": "Nail",
+    "title": "Reverse French Manicure",
+    "description": "Chic inverted French manicure designs"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d82",
+    "serviceType": "Nail",
+    "title": "Reverse Tip Moulding",
+    "description": "Special technique for elegant nail shaping"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d83",
+    "serviceType": "Nail",
+    "title": "Rhinestone Art",
+    "description": "Sparkling rhinestones for glam nails"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d84",
+    "serviceType": "Nail",
+    "title": "Rose Art Design",
+    "description": "Romantic rose patterns hand-painted"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d85",
+    "serviceType": "Nail",
+    "title": "Rounded Shape Extensions",
+    "description": "Classic rounded nail extensions"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d86",
+    "serviceType": "Nail",
+    "title": "Sculpting with E-File",
+    "description": "Precision sculpting using electric files"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d87",
+    "serviceType": "Nail",
+    "title": "Sculpting with Nail Forms",
+    "description": "Create perfect nail shapes with forms"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d88",
+    "serviceType": "Nail",
+    "title": "Sculpture Form Extensions",
+    "description": "Elegant extensions created with sculpture forms"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d89",
+    "serviceType": "Nail",
+    "title": "Seasonal & Event Nail Art",
+    "description": "Nail art designs tailored for special occasions"
+  }
+]

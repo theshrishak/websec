@@ -1,0 +1,22 @@
+@BASE_URL = http://localhost:7000/makeup
+@TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODY4YWI1OTEwYzg3ZGIwNWRlYjk4NjkiLCJpYXQiOjE3NTE2OTEzNTF9.W6lw57NbRwdoI2MozPw08ibZ4drSoReNi6ydSvd2-A4
+
+# Get all makeup items
+GET {{BASE_URL}}/
+Authorization: Bearer {{TOKEN}}
+Content-Type: application/json
+
+###
+
+# Add a new makeup
+POST {{BASE_URL}}/
+Authorization: Bearer {{TOKEN}} 
+Content-Type: application/json
+
+{
+    "title": "Lipstick AAA",
+    "price": 20,
+    "duration": 30,
+    "info": "Long-lasting lipstick",
+    "description": "A vibrant red lipstick that lasts all day."
+}

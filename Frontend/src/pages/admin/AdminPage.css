@@ -1,0 +1,141 @@
+.admin-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  background: #f8f9fb;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  margin-bottom: 32px;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.admin-section {
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 24px 20px;
+}
+
+.admin-section h2 {
+  margin-bottom: 18px;
+  color: #333;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.admin-table thead th {
+  background: #f3f6fa;
+  color: #444;
+  border-bottom: 2px solid #e4e8ef;
+}
+
+.admin-table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  background: #ffc107;
+  color: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.role-badge {
+  padding: 5px 12px;
+  border-radius: 12px;
+  background: #e3e6f0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.role-admin {
+  background: #4caf50;
+  color: #fff;
+}
+
+.role-user {
+  background: #2196f3;
+  color: #fff;
+}
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.badge-warning {
+  background: #ff9800;
+}
+
+.badge-success {
+  background: #4caf50;
+}
+
+.badge-danger {
+  background: #f44336;
+}
+
+.action-group {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #2196f3;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.action-btn.danger {
+  background: #f44336;
+}
+
+.action-btn.success {
+  background: #4caf50;
+}
+
+.action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

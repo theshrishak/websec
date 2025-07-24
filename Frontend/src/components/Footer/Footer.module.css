@@ -1,0 +1,30 @@
+.siteFooter {
+    background-color: #37030f;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.leftContent,
+.centerContent,
+.rightContent {
+    flex: 1;
+    padding: 10px;
+}
+
+.link {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}

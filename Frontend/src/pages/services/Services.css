@@ -1,0 +1,93 @@
+/* Existing styles */
+
+.services-page {
+  padding: 20px;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+}
+
+.service-card:hover {
+  transform: scale(1.05); /* Scale up the card slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a larger shadow */
+}
+
+.service-image {
+  width: 100%;
+  /* Ensures the image fits the card width */
+  height: 250px;
+  /* Sets a consistent height for all images */
+  object-fit: cover;
+  /* Crops excess parts to maintain the aspect ratio */
+  object-position: center;
+  /* Centers the image within the frame */
+  display: block;
+  /* Removes inline spacing issues */
+  border-radius: 8px;
+  /* Optional: Makes the image corners rounded */
+}
+
+
+.service-details {
+  padding: 10px;
+}
+
+.service-description {
+  margin-bottom: 7px;
+}
+
+.book-now-button,
+.add-service-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.book-now-button:hover,
+.add-service-button:hover {
+  background-color: #0056b3;
+}
+
+.add-service-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}

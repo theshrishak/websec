@@ -1,0 +1,159 @@
+/* General Navbar Styling - Clean and Minimal */
+.navbar {
+  background-color: white;
+  /* Remove background color */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Georgia', serif;
+  /* Using Georgia font */
+  /* Light shadow for depth */
+}
+
+/* Logo */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  font-family: 'Georgia', serif;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  font-size: 1rem;
+  /* Smaller and cleaner */
+  font-weight: normal;
+  /* Default */
+  font-family: 'Georgia', serif;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  /* Remove color */
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Georgia', serif;
+}
+
+.nav-links a:hover {
+  font-weight: bold;
+  /* Text becomes bold on hover */
+}
+
+/* User Actions */
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #333;
+  /* Clean black border */
+  color: #333;
+  background: transparent;
+  transition: all 0.3s ease;
+  font-family: 'Georgia', serif;
+}
+
+.btn:hover {
+  font-weight: bold;
+  /* Bold on hover */
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: normal;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  list-style: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 7px;
+  cursor: pointer;
+  font-weight: normal;
+  /* Default */
+  font-family: 'Georgia', serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-menu li:hover {
+  font-weight: bold;
+  background-color: darkgray;
+  /* Bold on hover */
+}
+
+/* Mobile Navigation */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

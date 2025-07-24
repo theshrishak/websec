@@ -1,0 +1,214 @@
+/* General Styling */
+.homepage {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Times New Roman', serif;
+  background-color: #fff8f0;
+  /* Light peach for a beauty-centric vibe */
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  color: white;
+}
+
+.hero-image {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.hero-image:hover {
+  filter: brightness(90%);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(146, 129, 129, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.hero-content p {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  color: #fff;
+  background-color: #5e0217;
+  /* Pink tone for beauty */
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #52333a;
+  transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+  gap: 20px;
+}
+
+.feature {
+  width: 30%;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #f5d4e6;
+  /* Subtle pink border */
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(168, 0, 39, 0.4);
+}
+
+.feature-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.feature h3 {
+  font-size: 2rem;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #411e26;
+}
+
+.feature p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: #fef0f5;
+  /* Soft pink background */
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 40px 0;
+  animation: slideIn 1s forwards 0.5s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #5e0217;
+}
+
+.testimonial {
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #333;
+}
+
+.testimonial h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Call to Action Section */
+.cta {
+  background: #ffdae2;
+  color: rgb(54, 0, 0);
+  padding: 40px 20px;
+  margin-top: 40px;
+  border-radius: 12px;
+}
+
+.cta h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+}
+
+.cta a {
+  font-size: 1.3rem;
+  color: white;
+  background: #37030f;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta a:hover {
+  background: #c96876;
+  transform: scale(1.1);
+}
+
+/* Button Pulse Effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-primary,
+.btn-success {
+  animation: pulse 2s infinite;
+}
