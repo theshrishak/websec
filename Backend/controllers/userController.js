@@ -59,6 +59,7 @@ exports.register_new_user = async (req, res) => {
 
 exports.login_user = async (req, res) => { 
     try{
+        console.log(process.env.TOKEN_KEY);
         const user = await User.findOne({email: req.body.email});
         if(user){
             const validPass = await bcrypt.compare(req.body.password, user.password);

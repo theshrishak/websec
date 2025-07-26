@@ -16,10 +16,17 @@ import AdminPage from './pages/admin/AdminPage';
 import Nails from './pages/nails/Nails';
 import Makeup from './pages/makeup/Makeup';
 import AdminSettings from './pages/settings/AdminSettings';
+import { api } from './api/Api';
 
-// import AddService from './pages/addservice/Addservice';
 
 function App() {
+
+  React.useEffect(() => {
+    api.get('/api/csrf-token') // Sets the cookie
+      .then(() => console.log('CSRF token set'))
+      .catch(err => console.error('CSRF init failed', err));
+  }, []);
+
   return (
     <Router>
       <ToastContainer />

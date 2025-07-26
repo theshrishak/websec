@@ -1,47 +1,14 @@
-// import axios from "axios"
-
-// const api =  axios.create({
-//     baseURL:"http://localhost:5000",
-//     withCredentials:true,
-//     headers :{
-//         "Content-Type" : "multipart/form-data"
-//     }
-// });
-
-// //creating test api
-// export const testApi= () => api.get('/test')
-
-
-// export const registerUserApi = (data) => api.post('/user/register', data);
-
-// // creating login api
-// export const loginUserApi =(data)=> api.post('user/login',data);
-
-// export const saveContact=(data)=>api.post('/contact',data);
-// export const rooms=(data)=>api.post('/rooms',data);
-
-// export const createBooking = (data) => api.post('/bookings/booking', data);
-// export const getBookings = () => api.get('/bookings/');
-
-
-
-// //creating admin api
-
-// export const addServiceApi = (data) => api.post('/services', data);
-
-// export const addRoom=(data)=>api.post('room/createroom',data);
-// export const uploadImage=(data)=>api.post('images/upload',data);
-
-
 import axios from "axios";
 
-const api =  axios.create({
-    baseURL:"http://localhost:7000",
+export const api =  axios.create({
+    baseURL:"http://localhost:8080",
     withCredentials:true,
     headers :{
         "Authorization": `Bearer ${localStorage.getItem('token')}`,
-        "Content-Type" : "application/json"
-    }
+        "Content-Type" : "application/json",
+    },
+    xsrfCookieName: '_csrf',
+    xsrfHeaderName: 'XSRF-Token'
 });
 
 // Dynamically attach token before request
@@ -49,15 +16,14 @@ api.interceptors.request.use(config => {
     const token = localStorage.getItem('token');    
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;
+        config.headers['XSRF-Token'] = document.cookie.split(';').filter(c => c.trim().startsWith('csrftoken='))[0].split('=')[1];
     }
     return config;
 }, error => Promise.reject(error));
 
-//creating test api
 
 export const registerUserApi = (data) => api.post('/users/register', data);
 
-// creating login api
 export const loginUserApi =(data)=> api.post('/users/login',data);
 
 export const saveContact=(data)=>api.post('/contact',data);
@@ -71,7 +37,6 @@ export const getAllUser = () => api.get('/users/all/');
 export const getAllBooking = () => api.get('/booking/');
 export const updateBookingStatus = (id, status) => api.patch(`/booking/${id}/${status}`);
 export const updateUserRole = (id,status) => api.patch(`/users/role/${id}/${status}`);
-//creating admin api
 
 export const addServiceApi = (data) => api.post('/services', data);
 

@@ -43,6 +43,7 @@ const Footer = () => {
                         <a
                             href="https://www.instagram.com/sujina._/"
                             target="_blank"
+                            rel="noreferrer"           
                             className={styles.link}
                         >
                             Sujina Shrestha

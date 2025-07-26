@@ -10,6 +10,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [recaptchaToken, setRecaptchaToken] = useState('');
   const registrationImage = `${process.env.PUBLIC_URL}/assets/images/mylogo.png`;
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();

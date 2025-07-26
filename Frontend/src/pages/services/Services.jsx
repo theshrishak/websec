@@ -5,9 +5,6 @@ import './Services.css';
 
 const Services = () => {
     const [services, setServices] = useState([]);
-    const [loading,setLoading] = useState(true); 
-    const [error,setError] = useState(null); 
-  
   
     useEffect(() => {
       fetchAllServicesFromBackend(); // Load all data initially
@@ -26,12 +23,9 @@ const Services = () => {
           let fetchedServices = [...makeupResponseBody.data, ...nailResponseBody.data]
           fetchedServices.sort(() => Math.random() - 0.5);
           setServices(fetchedServices);
-          setLoading(false);
         }
       } catch (error) {
         console.error('Error fetching Makeup data: ', error);
-        setError(error);
-        setLoading(false);
       }
     };
 

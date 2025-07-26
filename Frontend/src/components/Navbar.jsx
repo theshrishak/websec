@@ -7,7 +7,6 @@ const Navbar = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Get user data from localStorage
     const userData = localStorage.getItem("user");
     if (userData) {
       const usr = JSON.parse(userData);
@@ -79,7 +78,7 @@ const Navbar = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  <i className="fas fa-user"></i> Welcome, {user.fullname.split(" ")[0].toUpperCase()}
+                  <i className="fas fa-user"></i> Welcome, {user.fullname?.split(" ")[0].toUpperCase()}
                 </button>
                 <ul className="dropdown-menu">
                   <li>

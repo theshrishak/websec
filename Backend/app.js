@@ -2,8 +2,13 @@ const express = require('express');
 const morgan = require('morgan');
 const fileUpload = require('express-fileupload');
 const cors = require('cors');
+const csrf = require('csurf');
+const cookieParser = require('cookie-parser');
+const helmet = require('helmet');
 
-// Routes Imports
+const { logger } = require('./utils/logger');
+const { deepSanitize } = require('./utils/sanitize');
+
 const userRoute = require('./routes/userRoute');
 const nailRoute = require('./routes/nailRoute');    
 const makeupRoute = require('./routes/makeupRoute');
@@ -11,33 +16,45 @@ const bookingRoute = require('./routes/bookingRoute');
 
 const app = express();
 
+app.use(helmet());
 app.use(express.json());
-app.use(morgan('tiny'));
+
+app.use(morgan('combined', {
+    stream: {
+        write: (message) => logger.info(message.trim())
+    }
+}));
+
+app.use((req, res, next) => {
+  req.body = deepSanitize(req.body);
+  next();
+});
+
+app.use(cookieParser());
 app.use(fileUpload({useTempFiles: true}));
 
-
-// Define CORS options
-const corsOptions = {
-  origin: 'http://localhost:3000', // Specify your front-end URL here
-  credentials: true, // Allow credentials (cookies, HTTP authentication, etc.)
-  methods: 'GET,POST,PUT, PATCH, DELETE', // Allow specific HTTP methods
-  allowedHeaders: 'Content-Type,Authorization', // Allowed headers
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true,
+  methods: 'GET, POST,PUT, PATCH, DELETE',
+  allowedHeaders: ['Content-Type', 'Authorization', 'XSRF-Token'],
   exposedHeaders: 'Access-Control-Allow-Origin',
-};
+}));
+app.use(csrf({ cookie: true }));
 
-// Use CORS with the specified options
-app.use(cors(corsOptions));
+app.get('/api/csrf-token', (req, res) => {
+  res.cookie('csrftoken', req.csrfToken());
+  res.status(200).json({ csrfToken: req.csrfToken() });
+});
+
+app.use('/users', userRoute);
+app.use('/nail', nailRoute);
+app.use('/makeup', makeupRoute);
+app.use('/booking', bookingRoute);
 
 app.get('/', (req, res) => {
     res.send('Welcome to BeautyBooking API');
     res.end();
 });
-
-
-// Routes
-app.use('/users', userRoute);
-app.use('/nail', nailRoute);
-app.use('/makeup', makeupRoute);
-app.use('/booking', bookingRoute);
 
 module.exports = app;

@@ -9,9 +9,6 @@ const Book = () => {
   const { id } = useParams();
   const [service, setService] = useState({});
   const [serviceType, setServiceType] = useState("");
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [user, setUser] = useState(null);
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -29,7 +26,6 @@ const Book = () => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
       const parsedUser = JSON.parse(storedUser);
-      setUser(parsedUser);
 
       // Update formData with user details
       setFormData((prevFormData) => ({
@@ -55,11 +51,8 @@ const Book = () => {
         setService(responseNail.data.data);
         setServiceType("Nail");
       }
-      setLoading(false);
     } catch (error) {
       console.error('Error fetching service data:', error);
-      setError(error);
-      setLoading(false);
     }
   };
 

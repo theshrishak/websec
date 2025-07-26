@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { getAllBooking, getUserDetails, updateUserDetails } from '../../api/Api';
+import { getAllBooking, updateUserDetails } from '../../api/Api';
 import './Profile.css';
 
 const Profile = () => {
@@ -53,19 +53,19 @@ const Profile = () => {
     }
   };
 
-  const fetchUserDetails = async () => {
-    try {
-      const response = await getUserDetails();
-      
-      if (response.data.success) {
-        localStorage.setItem("user", JSON.stringify(response.data.data));
-        setRole(response.data.data.role);
-        setUser(response.data.data);
-      }
-    } catch (error) {
-      console.error('Error fetching user profile:', error);
-    }
-  };
+  // const fetchUserDetails = async () => {
+  //   try {
+  //     const response = await getUserDetails();
+  //
+  //     if (response.data.success) {
+  //       localStorage.setItem("user", JSON.stringify(response.data.data));
+  //       setRole(response.data.data.role);
+  //       setUser(response.data.data);
+  //     }
+  //   } catch (error) {
+  //     console.error('Error fetching user profile:', error);
+  //   }
+  // };
 
 
   const handleEditDetails = (e) => {
@@ -82,14 +82,14 @@ const Profile = () => {
     });
   };
 
-  const handleBookingUpdate = (id, newStatus) => {
-    setBookings((prevBookings) =>
-      prevBookings.map((booking) =>
-        booking.id === id ? { ...booking, status: newStatus } : booking
-      )
-    );
-  };
-
+  // const handleBookingUpdate = (id, newStatus) => {
+  //   setBookings((prevBookings) =>
+  //     prevBookings.map((booking) =>
+  //       booking.id === id ? { ...booking, status: newStatus } : booking
+  //     )
+  //   );
+  // };
+  //
   const handleSubmit = async (e) => {
       e.preventDefault();
       try {
@@ -102,7 +102,7 @@ const Profile = () => {
         }  
         const response = await updateUserDetails(data);
         if (response.data.success === true) {
-          const updatedUserData = fetchUserDetails();
+          //const updatedUserData = fetchUserDetails();
           toast.success('Profiled Updated Successfully!');
           navigate("/profile")
         } else {
