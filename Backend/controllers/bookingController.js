@@ -3,7 +3,6 @@ const Makeup = require("../models/Makeup");
 const User = require("../models/User");
 const Booking = require("../models/Booking");
 const { success,failure } = require("../utils/message");
-const cloudinary = require("../utils/cloudinary");
 const moment = require("moment");
 const {sendEmail} = require("../utils/sendEmail.js");
 const emailTemplate = require("../utils/emailTemplate.js");

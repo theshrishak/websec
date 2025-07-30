@@ -10,7 +10,6 @@ const emailTemplate = require("../utils/emailTemplate.js");
 const Booking = require("../models/Booking.js");
 
 exports.register_new_user = async (req, res) => {
-    
     try{
         const checkUser= await User.findOne({email: req.body.email});
         if(checkUser){
@@ -49,7 +48,6 @@ exports.register_new_user = async (req, res) => {
     }
     catch(err){
         console.log(err);
-
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -59,15 +57,17 @@ exports.register_new_user = async (req, res) => {
 
 exports.login_user = async (req, res) => { 
     try{
-        console.log(process.env.TOKEN_KEY);
         const user = await User.findOne({email: req.body.email});
         if(user){
             const validPass = await bcrypt.compare(req.body.password, user.password);
             if(validPass){
-                const accessToken = jwt.sign({_id: user._id}, process.env.TOKEN_KEY);
-                console.log(`login --> `+accessToken);
-                
-                res.json({message:"Login Successful", data:user, success:true, accessToken: accessToken});
+                const accessToken = jwt.sign({_id: user._id}, process.env.TOKEN_KEY);                
+                res.json({
+                    message:"Login Successful",
+                    data: user,
+                    success:true, 
+                    accessToken
+                });
             }
             else{
                 res.json(failure("Invalid Email or Password"));

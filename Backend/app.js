@@ -5,9 +5,12 @@ const cors = require('cors');
 const csrf = require('csurf');
 const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
+const xssClean = require('xss-clean');
+const mongoSanitize = require('express-mongo-sanitize');
+const rateLimit = require('express-rate-limit');
 
 const { logger } = require('./utils/logger');
-const { deepSanitize } = require('./utils/sanitize');
+// const { deepSanitize } = require('./utils/sanitize');
 
 const userRoute = require('./routes/userRoute');
 const nailRoute = require('./routes/nailRoute');    
@@ -17,6 +20,11 @@ const bookingRoute = require('./routes/bookingRoute');
 const app = express();
 
 app.use(helmet());
+app.use(xssClean());
+app.use(rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100
+}))
 app.use(express.json());
 
 app.use(morgan('combined', {
@@ -25,13 +33,14 @@ app.use(morgan('combined', {
     }
 }));
 
-app.use((req, res, next) => {
-  req.body = deepSanitize(req.body);
-  next();
-});
+// app.use((req, res, next) => {
+//   req.body = deepSanitize(req.body);
+//   next();
+// });
 
 app.use(cookieParser());
 app.use(fileUpload({useTempFiles: true}));
+app.use(mongoSanitize());
 
 app.use(cors({
   origin: 'http://localhost:3000',
