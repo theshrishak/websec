@@ -17,6 +17,6 @@ router.post("/change-password", auth.verifyUser, userController.change_password)
 
 
 // Route to get user details (for admin)
-router.get('/all', auth.verifyUser, userController.get_all_users);
-router.patch('/role/:userId/:status/', auth.verifyUser, userController.update_user_role);    
+router.get('/all', auth.isAdmin, userController.get_all_users);
+router.patch('/role/:userId/:status/', auth.isAdmin, userController.update_user_role);    
 module.exports = router;

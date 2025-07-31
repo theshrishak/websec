@@ -103,7 +103,7 @@ const Book = () => {
     const successUrl = `${window.location.origin}/payment-success`;
     const failureUrl = `${window.location.origin}/payment-failure`;
 
-    const esewaUrl = `https://esewa.com.np/epay/main?amt=${amount}&pid=${refId}&scd=${merchantId}&su=${successUrl}&fu=${failureUrl}`;
+    const esewaUrl = `https://esewa.com.np/epay/main?txAmt=${0}&amt=${amount}&pid=${refId}&scd=${merchantId}&su=${successUrl}&fu=${failureUrl}&psc=`;
     window.location.href = esewaUrl;
   };
 

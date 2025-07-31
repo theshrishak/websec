@@ -10,7 +10,6 @@ const mongoSanitize = require('express-mongo-sanitize');
 const rateLimit = require('express-rate-limit');
 
 const { logger } = require('./utils/logger');
-// const { deepSanitize } = require('./utils/sanitize');
 
 const userRoute = require('./routes/userRoute');
 const nailRoute = require('./routes/nailRoute');    
@@ -33,11 +32,6 @@ app.use(morgan('combined', {
     }
 }));
 
-// app.use((req, res, next) => {
-//   req.body = deepSanitize(req.body);
-//   next();
-// });
-
 app.use(cookieParser());
 app.use(fileUpload({useTempFiles: true}));
 app.use(mongoSanitize());
@@ -52,8 +46,9 @@ app.use(cors({
 app.use(csrf({ cookie: true }));
 
 app.get('/api/csrf-token', (req, res) => {
-  res.cookie('csrftoken', req.csrfToken());
-  res.status(200).json({ csrfToken: req.csrfToken() });
+  const csrfToken = req.csrfToken();
+  res.cookie('csrftoken', csrfToken);
+  res.status(200).json({ csrfToken });
 });
 
 app.use('/users', userRoute);

@@ -1,0 +1,79 @@
+[
+  {
+    "serviceId": "677a176e8a2065fed4e56d61",
+    "serviceType": "Nail",
+    "price": 725,
+    "title": "Minimal Heart Art",
+    "description": "Delicate heart designs for minimalistic lovers"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d62",
+    "serviceType": "Nail",
+    "price": 700,
+    "title": "Minimalist Line Art",
+    "description": "Clean and simple line nail art for everyday elegance"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d63",
+    "serviceType": "Nail",
+    "price": 675,
+    "title": "Mosaic Effect Nail Art",
+    "description": "Colorful mosaic patterns for a unique look"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d64",
+    "serviceType": "Nail",
+    "price": 650,
+    "title": "Mother's Day Floral Art",
+    "description": "Special floral designs to celebrate moms"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d65",
+    "serviceType": "Nail",
+    "price": 625,
+    "title": "Multi-Colored Gel Infill",
+    "description": "Bright gel infills with multiple colors"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d66",
+    "serviceType": "Nail",
+    "price": 600,
+    "title": "Multiple Bead Technique",
+    "description": "Advanced bead application for 3D nail art"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d67",
+    "serviceType": "Nail",
+    "price": 575,
+    "title": "Natural Look Extensions",
+    "description": "Extensions that blend seamlessly with your nails"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d68",
+    "serviceType": "Nail",
+    "price": 550,
+    "title": "Neon Nail Art",
+    "description": "Vibrant neon colors to brighten your style"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d69",
+    "serviceType": "Nail",
+    "price": 525,
+    "title": "Negative Space Design",
+    "description": "Modern nails using natural spaces and shapes"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d6a",
+    "serviceType": "Nail",
+    "price": 500,
+    "title": "Non-Acid Primer for Extensions",
+    "description": "Gentle primer for sensitive nails"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d6b",
+    "serviceType": "Nail",
+    "price": 525,
+    "title": "Ombre Blend Extensions",
+    "description": "Soft gradient effect for elegant extensions"
+  }
+]

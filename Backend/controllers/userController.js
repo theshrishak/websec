@@ -8,6 +8,7 @@ const {randomOtpGenerator} = require("../utils/randomOtpGenerator.js");
 const {sendEmail} = require("../utils/sendEmail.js");
 const emailTemplate = require("../utils/emailTemplate.js");
 const Booking = require("../models/Booking.js");
+const { logger } = require('../utils/logger');
 
 exports.register_new_user = async (req, res) => {
     try{
@@ -47,7 +48,7 @@ exports.register_new_user = async (req, res) => {
         }
     }
     catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -78,7 +79,7 @@ exports.login_user = async (req, res) => {
         }
     }   
     catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -95,7 +96,7 @@ exports.get_user_profile = async (req, res) => {
         }
     }
     catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -113,7 +114,7 @@ exports.update_user_profile = async (req, res) => {
         });
         res.json(success("Profile Updated Successfully"));
     } catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }   
     res.end();
@@ -140,8 +141,6 @@ module.exports.get_user_metadata = async (req, res) => {
     }));
 
     
-    // Return the metadata
-
     res.status(200).json({
         success: true,
         message: 'User metadata fetched successfully',
@@ -149,7 +148,7 @@ module.exports.get_user_metadata = async (req, res) => {
       purchaseHistory:service
     });
   } catch (err) {
-    console.error(err);
+    logger.error(err);
     res.status(500).json({ success: false, message: 'Server Error' });
   }
 }
@@ -180,12 +179,11 @@ module.exports.get_all_users = async (req, res) => {
         res.json(success("Users Fetched", users)); 
     }
     catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
 }
-
 
 module.exports.update_user_role = async (req, res) => {
     try{
@@ -193,7 +191,7 @@ module.exports.update_user_role = async (req, res) => {
         res.json(success("User Role Updated Successfully"));
     }
     catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -217,7 +215,7 @@ module.exports.resetCode = async (req, res) => {
         sendEmail(user.email, user.fullname, subject, textContent)
         res.json(success("Reset code sent to your registered email"))
     } catch (error) {
-        console.error(error)
+        logger.error(error)
     }
     res.end()
 }
@@ -255,7 +253,7 @@ module.exports.newPassword = async function (req, res) {
                     const now = moment(Date.now()).format()
                     const expiration = user.resetCodeExpiration
                     const remainingTime = -(moment(now).diff(expiration, 's'))
-                    console.log(now, expiration, remainingTime)
+                    logger.info(now, expiration, remainingTime)
                     if (remainingTime > 0) {
                         const salt = await bcrypt.genSalt(10);
                         const hashed = await bcrypt.hash(password, salt);
@@ -281,7 +279,7 @@ module.exports.newPassword = async function (req, res) {
             res.json(failure("Reset Code does not exist"))
         }
     } catch (error) {
-        console.log(error)
+        logger.info(error)
         res.json(failure())
     }
     res.end()

@@ -24,16 +24,17 @@ const AdminPage = () => {
       if (response.data.success) setUsers(response.data.data);
     } catch (error) {
       toast.error('Error fetching users');
+      window.location.href = '/';
     }
   };
 
   const fetchBookings = async () => {
     try {
       const response = await getAllBooking();
-      console.log(response.data.data);
       if (response.data.success) setBookings(response.data.data);
     } catch (error) {
       toast.error('Error fetching bookings');
+      window.location.href = '/';
     }
   };
 

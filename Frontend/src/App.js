@@ -20,14 +20,18 @@ import { api } from './api/Api';
 
 
 function App() {
+  const [csrf, setCSRF] = React.useState(false);
 
   React.useEffect(() => {
+    setCSRF(false);
     api.get('/api/csrf-token') // Sets the cookie
-      .then(() => console.log('CSRF token set'))
+      .then(() => {
+        setCSRF(true);
+      })
       .catch(err => console.error('CSRF init failed', err));
   }, []);
 
-  return (
+  return csrf && (
     <Router>
       <ToastContainer />
       <Navbar />

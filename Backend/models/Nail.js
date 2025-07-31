@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const { logger } = require('../utils/logger');
+
 
 const nailSchema = new mongoose.Schema({
     title: {
@@ -37,6 +39,26 @@ const nailSchema = new mongoose.Schema({
         type: Number,
         default: 0
     }
+});
+
+nailSchema.post('save', function(res) {
+  logger.info({
+    type: 'mongoose',
+    operation: 'SAVE',
+    model: 'NAIL',
+    result: res,
+    timestamp: new Date().toISOString()
+  });
+});
+
+nailSchema.post('findByIdAndDelete', function(res) {
+  logger.info({
+    type: 'mongoose',
+    operation: 'UPDATE',
+    model: 'NAIL',
+    result: res,
+    timestamp: new Date().toISOString()
+  });
 });
 
 module.exports = mongoose.model('Nail', nailSchema);

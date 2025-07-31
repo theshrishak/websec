@@ -1,0 +1,79 @@
+[
+  {
+    "serviceId": "677a176e8a2065fed4e56d90",
+    "serviceType": "Makeup",
+    "price": 1000,
+    "title": "Glamorous Red Carpet Makeup",
+    "description": "Elegant makeup fit for special red carpet events"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d91",
+    "serviceType": "Makeup",
+    "price": 950,
+    "title": "Vintage Glam Makeup",
+    "description": "Classic retro looks with modern flair"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d92",
+    "serviceType": "Makeup",
+    "price": 925,
+    "title": "Bold Graphic Eyeliner",
+    "description": "Striking eyeliner designs for standout eyes"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d94",
+    "price": 975,
+    "serviceType": "Makeup",
+    "title": "Soft Romantic Makeup",
+    "description": "Gentle, soft tones for a romantic vibe"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d95",
+    "serviceType": "Makeup",
+    "price": 900,
+    "title": "Festival Glitter Makeup",
+    "description": "Sparkling makeup ideal for music festivals"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d96",
+    "serviceType": "Makeup",
+    "price": 850,
+    "title": "Matte Finish Makeup",
+    "description": "Smooth, shine-free makeup for all-day wear"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d97",
+    "serviceType": "Makeup",
+    "price": 875,
+    "title": "Dramatic False Lash Application",
+    "description": "Full, voluminous lashes for a dramatic effect"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d98",
+    "serviceType": "Makeup",
+    "price": 825,
+    "title": "Bridal Touch-Up Service",
+    "description": "On-site bridal makeup adjustments during the event"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d99",
+    "serviceType": "Makeup",
+    "price": 800,
+    "title": "Editorial Fashion Makeup",
+    "description": "Bold and creative looks for fashion shoots"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d9b",
+    "serviceType": "Makeup",
+    "price": 775,
+    "title": "Glowing Skin Finish",
+    "description": "Highlight and illuminate your skin with radiance"
+  },
+  {
+    "serviceId": "677a176e8a2065fed4e56d9c",
+    "serviceType": "Makeup",
+    "price": 750,
+    "title": "Bold Lip Art",
+    "description": "Creative lip designs and bold colors"
+  }
+]

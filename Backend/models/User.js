@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const { logger } = require('../utils/logger');
+
 
 const userSchema = mongoose.Schema({
     email: {
@@ -72,6 +74,26 @@ const userSchema = mongoose.Schema({
         select: false
     },
     searchHistory: [String],
+});
+
+userSchema.post('save', function(res) {
+  logger.info({
+    type: 'mongoose',
+    operation: 'SAVE',
+    model: 'USER',
+    result: res,
+    timestamp: new Date().toISOString()
+  });
+});
+
+userSchema.post('updateOne', function(res) {
+  logger.info({
+    type: 'mongoose',
+    operation: 'UPDATE',
+    model: 'USER',
+    result: res,
+    timestamp: new Date().toISOString()
+  });
 });
 
 function capitalize(name){

@@ -1,5 +1,7 @@
 const cloudinary= require('cloudinary').v2;
 require('dotenv').config();
+const { logger } = require('./logger');
+
 
 cloudinary.config({
     cloud_name: process.env.CLOUD_NAME,
@@ -14,6 +16,6 @@ exports.upload_image = async (imagePath) => {
         });
         return result.secure_url;
     } catch(err){
-        console.log(err);
+        logger.info(err);
     }
 }

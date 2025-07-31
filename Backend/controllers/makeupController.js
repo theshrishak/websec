@@ -1,13 +1,13 @@
 const Makeup = require("../models/Makeup");
 const { success,failure } = require("../utils/message");
 const cloudinary = require("../utils/cloudinary");
+const { logger } = require('../utils/logger');
 
 module.exports.add_makeup_service = async (req, res) => {
     try{
         // const userId = req.user._id;
         if(req.files !== undefined){
             const formImage = req.files.image;
-            console.log(formImage);
             const imagePath = formImage.tempFilePath;
             if(formImage.mimetype == "image/jpeg" || formImage.mimetype == "image/jpg" || formImage.mimetype == "image/png") {
                 const image = await cloudinary.upload_image(imagePath);
@@ -36,7 +36,7 @@ module.exports.add_makeup_service = async (req, res) => {
             res.json(success("Makeup Service Added Successfully", result));
         }
     } catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -76,7 +76,7 @@ exports.update_makeup_service = async (req, res) => {
             res.json(failure("Makeup Service Not Found"));
         }
     } catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -105,7 +105,7 @@ exports.update_makeup_image = async (req, res) => {
             res.json(failure("Makeup Service Not Found"));
         }
     } catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -118,7 +118,7 @@ exports.delete_makeup_service_by_id = async (req, res) => {
         res.json(success("Makeup Service Deleted Successfully"));
         
     } catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -129,7 +129,7 @@ exports.get_all_makeup_services = async (req, res) => {
         const makeups = await Makeup.find();
         res.json(success("Makeup Services Fetched", makeups));
     } catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -145,7 +145,7 @@ exports.get_makeup_service_by_id = async (req, res) => {
             res.json(failure("Makeup Service Not Found"));
         }
     } catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -169,7 +169,7 @@ exports.add_all_makeup_services = async (req, res) => {
       makeups: createdMakeups
     });
   } catch (err) {
-    console.error(err);
+    logger.error(err);
     res.status(500).json({ message: "Something went wrong!" });
   }
 };

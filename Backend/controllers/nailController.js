@@ -2,6 +2,8 @@ const Nail = require("../models/Nail");
 const { success,failure } = require("../utils/message");
 const cloudinary = require("../utils/cloudinary");
 
+const { logger } = require('../utils/logger');
+
 module.exports.add_nail_service = async (req, res) => {
     try{
         // const userId = req.user._id;
@@ -35,7 +37,7 @@ module.exports.add_nail_service = async (req, res) => {
             res.json(success("Nail Service Added Successfully", result));
         }
     } catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -76,7 +78,7 @@ exports.update_nail_service = async (req, res) => {
             res.json(failure("Nail Service Not Found"));
         }
     } catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -105,7 +107,7 @@ exports.update_nail_image = async (req, res) => {
             res.json(failure("Nail Service Not Found"));
         }
     } catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -117,7 +119,7 @@ exports.delete_nail_service_by_id = async (req, res) => {
         await Nail.findByIdAndDelete(nailId);
         res.json(success("Nail Service Deleted Successfully"));
     } catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -128,7 +130,7 @@ exports.get_all_nail_services = async (req, res) => {
         const nails = await Nail.find();
         res.json(success("Nail Services Fetched", nails));
     } catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -144,7 +146,7 @@ exports.get_nail_service_by_id = async (req, res) => {
             res.json(failure("Nail Service Not Found"));
         }
     } catch(err){
-        console.log(err);
+        logger.info(err);
         res.json(failure("Something went wrong"));
     }
     res.end();
@@ -169,7 +171,7 @@ exports.add_all_nail_services = async (req, res) => {
       nails: createdNails,
     });
   } catch (err) {
-    console.error(err);
+    logger.error(err);
     res.status(500).json({ message: "Something went wrong!" });
   }
 };

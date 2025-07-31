@@ -18,8 +18,6 @@ const Makeup = () => {
     const fetchAllMakeupFromBackend = async () => {
     try {
       const response = await getAllMakeupApi();
-      console.log('Makeup data: ', response);
-      
       let responseBody = response.data;
       if (responseBody.success === true) {
         setGetAllMakeup(responseBody.data);

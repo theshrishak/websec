@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { logger } = require('../utils/logger');
 
 const BookingSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
@@ -8,6 +9,26 @@ const BookingSchema = new mongoose.Schema({
   bookingDate: { type: String, required: true },
   bookingTime: { type: String, required: true },
   status: { type: String, enum: ["Pending", "Confirmed", "Cancelled"], default: "Pending" },
+});
+
+BookingSchema.post('save', function(res) {
+  logger.info({
+    type: 'mongoose',
+    operation: 'SAVE',
+    model: 'BOOKING',
+    result: res,
+    timestamp: new Date().toISOString()
+  });
+});
+
+BookingSchema.post('findOneAndUpdate', function(res) {
+  logger.info({
+    type: 'mongoose',
+    operation: 'UPDATE',
+    model: 'Booking',
+    result: res,
+    timestamp: new Date().toISOString()
+  });
 });
 
 module.exports = mongoose.model("Booking", BookingSchema);

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api =  axios.create({
-    baseURL:"http://localhost:8080",
+    baseURL:"http://localhost:8090",
     withCredentials:true,
     headers :{
         "Authorization": `Bearer ${localStorage.getItem('token')}`,
@@ -16,8 +16,8 @@ api.interceptors.request.use(config => {
     const token = localStorage.getItem('token');    
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;
-        config.headers['XSRF-Token'] = document.cookie.split(';').filter(c => c.trim().startsWith('csrftoken='))[0].split('=')[1];
     }
+    config.headers['XSRF-Token'] = document.cookie?.split(';').filter(c => c.trim().startsWith('csrftoken='))[0]?.split('=')[1];
     return config;
 }, error => Promise.reject(error));
 

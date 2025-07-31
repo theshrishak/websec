@@ -6,6 +6,7 @@ const { success,failure } = require("../utils/message");
 const moment = require("moment");
 const {sendEmail} = require("../utils/sendEmail.js");
 const emailTemplate = require("../utils/emailTemplate.js");
+const { logger } = require('../utils/logger');
 
 
 //Object / Enum Service Type
@@ -56,7 +57,6 @@ module.exports.create_new_booking= async (req, res) => {
       bookingTime: formattedTime,
       appointmentPlace: appointmentPlace ? appointmentPlace : "Studio",
     });
-
     const subject = "Booking Confirmation - Beauty Aesthetics";
     const textContent = emailTemplate.createBookingEmailTemplate(user.fullname,service.title,serviceType,formattedDate,formattedTime,appointmentPlace)
     sendEmail(user.email, user.fullname, subject, textContent);
@@ -74,7 +74,7 @@ module.exports.create_new_booking= async (req, res) => {
     await booking.save();
     res.json(success("Booking Created Successfully", booking ));
   } catch (error) {
-    console.log(error);
+    logger.info(error);
     
     res.json(failure(error.message ));
   }
