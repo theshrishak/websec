@@ -41,7 +41,7 @@ app.use(cors({
   credentials: true,
   methods: 'GET, POST,PUT, PATCH, DELETE',
   allowedHeaders: ['Content-Type', 'Authorization', 'XSRF-Token'],
-  exposedHeaders: 'Access-Control-Allow-Origin',
+  // exposedHeaders: 'Access-Control-Allow-Origin',
 }));
 app.use(csrf({ cookie: true }));
 

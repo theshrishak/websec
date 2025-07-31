@@ -84,8 +84,7 @@ const Book = () => {
         bookingTime: formData.bookingTime,
       }           
       const response = await createBooking(data);
-      console.log(response);
-      if (response.data.success === true) {
+      if (response.data.success) {
         toast.success('Booking confirmed! See you soon!');
         navigate("/makeup")
       } else {
