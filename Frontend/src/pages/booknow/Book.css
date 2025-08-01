@@ -110,7 +110,7 @@ body {
 }
 
 .esewa-button {
-  background-color: #4caf50;
+  background-color: red;
   color: #fff;
   padding: 10px 20px;
   font-size: 16px;
@@ -122,5 +122,5 @@ body {
 }
 
 .esewa-button:hover {
-  background-color: #43a047;
+  background-color: red;
 }

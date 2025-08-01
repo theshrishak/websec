@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { createBooking, getAllNailByIdApi, getMakeupByIdApi } from '../../api/Api';
 import './Book.css';
 import { useNavigate } from 'react-router-dom';
+import { api } from '../../api/Api';
 
 const Book = () => {
   const { id } = useParams();
@@ -19,11 +20,11 @@ const Book = () => {
     serviceId: id,
   });
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Retrieve user data from local storage
-    const storedUser = localStorage.getItem("user");
+    const storedUser = sessionStorage.getItem("user");
     if (storedUser) {
       const parsedUser = JSON.parse(storedUser);
 
@@ -43,7 +44,7 @@ const Book = () => {
     try {
       const responseMakeup = await getMakeupByIdApi(serviceId);
       const responseNail = await getAllNailByIdApi(serviceId);
-      
+
       if (responseMakeup.data.success) {
         setService(responseMakeup.data.data);
         setServiceType("Makeup");
@@ -79,10 +80,10 @@ const Book = () => {
     try {
       const data = {
         serviceId: service._id,
-        serviceType:serviceType,
+        serviceType: serviceType,
         bookingDate: formData.bookingDate,
         bookingTime: formData.bookingTime,
-      }           
+      }
       const response = await createBooking(data);
       if (response.data.success) {
         toast.success('Booking confirmed! See you soon!');
@@ -96,14 +97,12 @@ const Book = () => {
   };
 
   const handleEsewaPayment = () => {
-    const merchantId = 'YOUR_MERCHANT_ID';
-    const amount = '2000';
-    const refId = `SERVICE-${formData.serviceId}-${Date.now()}`;
-    const successUrl = `${window.location.origin}/payment-success`;
-    const failureUrl = `${window.location.origin}/payment-failure`;
 
-    const esewaUrl = `https://esewa.com.np/epay/main?txAmt=${0}&amt=${amount}&pid=${refId}&scd=${merchantId}&su=${successUrl}&fu=${failureUrl}&psc=`;
-    window.location.href = esewaUrl;
+    api.get('/api/khalti') // Sets the cookie
+      .then((res) => {
+        window.location.href = res.data.payment_url;
+      })
+      .catch(err => alert('Khatli init failed'));
   };
 
   return (
@@ -182,7 +181,7 @@ const Book = () => {
         <div className="payment-container">
           <h3>Payment Options</h3>
           <button className="esewa-button" onClick={handleEsewaPayment}>
-            Pay with Esewa
+            Pay with Khalti
           </button>
         </div>
       </div>

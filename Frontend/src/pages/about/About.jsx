@@ -12,9 +12,9 @@ const About = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const user = JSON.parse(localStorage.getItem('user'));
-    const token = localStorage.getItem('token');
-    const id = localStorage.getItem('user_id');
+    const user = JSON.parse(sessionStorage.getItem('user'));
+    const token = sessionStorage.getItem('token');
+    const id = sessionStorage.getItem('user_id');
     if (!user || !token) {
       toast.error('Please log in to submit a review');
       return;

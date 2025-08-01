@@ -55,9 +55,10 @@ const Login = () => {
           // Clear form fields after successful login
           setEmail('');
           setPassword('');
-          localStorage.setItem("user_id", res.data.data._id);
-          localStorage.setItem("token", res.data.accessToken);
-          localStorage.setItem("user", JSON.stringify(res.data.data));
+          sessionStorage.setItem("user_id", res.data.data._id);
+          sessionStorage.setItem("token", res.data.accessToken);
+          sessionStorage.setItem("refreshToken", res.data.accessToken);
+          sessionStorage.setItem("user", JSON.stringify(res.data.data));
           navigate("/"); // Redirect to home page
         } else {
           toast.error(res.data.message);

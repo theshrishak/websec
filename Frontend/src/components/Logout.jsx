@@ -7,8 +7,8 @@ const Logout = () => {
   useEffect(() => {
     // Perform the logout logic here
     // For example, clearing user session data
-    localStorage.removeItem('user');
-    localStorage.clear();
+    sessionStorage.removeItem('user');
+    sessionStorage.clear();
     // Example of removing user data from localStorage
     // You can also clear other session data like tokens, etc.
 

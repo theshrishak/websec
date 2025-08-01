@@ -4,7 +4,7 @@ export const api =  axios.create({
     baseURL:"http://localhost:8090",
     withCredentials:true,
     headers :{
-        "Authorization": `Bearer ${localStorage.getItem('token')}`,
+        "Authorization": `Bearer ${sessionStorage.getItem('token')}`,
         "Content-Type" : "application/json",
     },
     xsrfCookieName: '_csrf',
@@ -13,7 +13,7 @@ export const api =  axios.create({
 
 // Dynamically attach token before request
 api.interceptors.request.use(config => {
-    const token = localStorage.getItem('token');    
+    const token = sessionStorage.getItem('token');    
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;
     }
